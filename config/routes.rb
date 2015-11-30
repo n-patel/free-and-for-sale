@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  get 'home/home'
+
   devise_for :users
   resources :items do
     resources :comments
