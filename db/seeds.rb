@@ -6,26 +6,34 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+blah = User.create(:email => "blah@blah.com")
+fizz = User.create(:email => "fizz@fizz.org")
+buzz = User.create(:email => "buzz@buzz.net")
+
+
 couch = Item.create(:title => "Ugly couch",
                     :summary => "A couch",
                     :price => "100.0",
                     :location => "Unit 1",
                     :sold => false,
-                    :category => "furniture")
+                    :category => "furniture",
+                    :user => fizz)
 
 umbrella = Item.create(:title => "Umbrella",
                        :summary => "No more rain",
                        :price => "10.25",
                        :location => "Unit 3",
                        :sold => false,
-                       :category => "misc")
+                       :category => "misc",
+                       :user => fizz)
 
 phone = Item.create(:title => "Old phone",
                     :summary => "A phone",
                     :price => "999.99",
                     :location => "Foothill",
                     :sold => true,
-                    :category => "electronics")
+                    :category => "electronics",
+                    :user => buzz)
 
 Comment.create(:contents => "This is hideous!", :item => couch)
 Comment.create(:contents => "Wow that's old", :item => phone)
