@@ -31,3 +31,6 @@ Comment.create(:contents => "This is hideous!", :item => couch)
 Comment.create(:contents => "Wow that's old", :item => phone)
 Comment.create(:contents => "Doesn't even work but whatever I'll buy it", :item => phone)
 Comment.create(:contents => "Has a hole in it", :item => umbrella)
+
+Photo.create(:url => "http://ak1.ostkcdn.com/images/products/P13318481L.jpg", :item => couch)
+Photo.create(:url => "http://cdn.shopify.com/s/files/1/0227/0033/products/Davek_Umbrella_Elite_Open_Straight_1024x1024.jpg?v=1381446908", :item => umbrella)
