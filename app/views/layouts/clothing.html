@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2/free_for_sale_css.css">
+  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2_dev/proj2/app/views/layouts/free_for_sale_css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
@@ -18,13 +18,13 @@
   <div class="container-fluid">
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/clothing.html">Clothing</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/furniture.html">Furniture</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/electronics.html">Electronics</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/housing.html">Housing</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/school.html">School</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/services.html">Services</a></li>
-        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/misc.html">Misc</a></li>
+        <li><a href="clothing.html.erb">Clothing</a></li>
+        <li><a href="furniture.html.erb">Furniture</a></li>
+        <li><a href="electronics.html.erb">Electronics</a></li>
+        <li><a href="housing.html.erb">Housing</a></li>
+        <li><a href="school.html.erb">School</a></li>
+        <li><a href="services.html.erb">Services</a></li>
+        <li><a href="misc.html.erb">Misc</a></li>
       </ul>
     </div>
   </div>
@@ -44,10 +44,6 @@
   <% @items.each do |item|
     puts item if item.category == "clothing" %>
     <div class="entry col-xs-12">
-
-        <div class="entry_status_collapsed">
-          <%= if @user == item.owner %> 
-        </div>
 
         <div class="entry_header">
           <%= item.title %>
