@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2_dev/proj2/app/views/layouts/free_for_sale_css.css">
+  <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/application.css">
+  <%= stylesheet_link_tag "application.css" %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
 
@@ -18,13 +21,13 @@
   <div class="container-fluid">
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="clothing.html.erb">Clothing</a></li>
-        <li><a href="furniture.html.erb">Furniture</a></li>
-        <li><a href="electronics.html.erb">Electronics</a></li>
-        <li><a href="housing.html.erb">Housing</a></li>
-        <li><a href="school.html.erb">School</a></li>
-        <li><a href="services.html.erb">Services</a></li>
-        <li><a href="misc.html.erb">Misc</a></li>
+        <li><a href="/clothing/index">Clothing</a></li>
+        <li><a href="../../furniture/index">Furniture</a></li>
+        <li><a href="../../electronics/index">Electronics</a></li>
+        <li><a href="../../housing/index">Housing</a></li>
+        <li><a href="../../school/index">School</a></li>
+        <li><a href="../../services/index">Services</a></li>
+        <li><a href="../../misc/index">Misc</a></li>
       </ul>
     </div>
   </div>
@@ -41,36 +44,37 @@
 
   <div class="top_space"> </div>
 
-  <% @items.each do |item|
-    puts item if item.category == "clothing" %>
-    <div class="entry col-xs-12">
+  <% @items.each do |item| %>
+    <% if item.category == "clothing" %>
+      <div class="entry col-xs-12">
 
-        <div class="entry_header">
-          <%= item.title %>
-        </div>
+          <div class="entry_header">
+            <%= item.title %>
+          </div>
 
-        <div class="entry_body col-xs-12">
-          <!-- <div class="entry_photo col-xs-4">
-            <%= item.photos %>
-          </div> -->
+          <div class="entry_body col-xs-12">
+            <!-- <div class="entry_photo col-xs-4">
+              <%= item.photos %>
+            </div> -->
 
-          <div class="entry_info col-xs-7">
-            <div class="entry_info1">
-              <%= item.user_id %>, <%= item.location %>
-            </div>
+            <div class="entry_info col-xs-7">
+              <div class="entry_info1">
+                <%= item.user_id %>, <%= item.location %>
+              </div>
 
-            <div class="entry_info2">
-              <%= item.summary %>
+              <div class="entry_info2">
+                <%= item.summary %>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="comments_collapsed col-xs-12">
-          <%= item.comments %>
-        </div>
+          <div class="comments_collapsed col-xs-12">
+            <%= item.comments %>
+          </div>
 
-    </div>
-  <%end%>
+      </div>
+    <% end %>
+  <% end%>
 
 
 </body>
