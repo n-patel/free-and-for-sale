@@ -2,12 +2,19 @@
 <html>
 <head>
   <title>FreeAndForSale</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+	<% if notice %>
+  		<p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+  		<p class="alert alert-danger"><%= alert %></p>
+	<% end %>
 <%= yield %>
 
 </body>
