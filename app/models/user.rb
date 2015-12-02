@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   validate :email, :password
   has_many :comments
+  has_many :items
 end
