@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+ 
   devise_for :add_devise_to_users
   get 'index/index'
 
@@ -9,9 +10,24 @@ Rails.application.routes.draw do
 
   get 'items' => 'items#index'
   get '/items/:id' => 'items#show'
-  get '/items/:id/edit' => 'items#edit'
   patch '/items/:id/' => 'items#update'
 
+
+ # get 'school/show'
+
+  get 'services/index' => 'services#index'
+
+ get 'school/index' => 'school#index'
+
+  get 'misc/index' => 'misc#index'
+
+ get 'housing/index' => 'housing#index'
+
+  get 'furniture/index' => 'furniture#index'
+
+  get 'electronics/index' => 'electronics#index'
+
+  get 'clothing/index' => 'clothing#index'
 
 
 
