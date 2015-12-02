@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2/free_for_sale_css.css">
+  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2_dev/proj2/app/views/layouts/free_for_sale_css.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
@@ -44,10 +44,6 @@
   <% @items.each do |item|
     puts item if item.category == "clothing" %>
     <div class="entry col-xs-12">
-
-        <div class="entry_status_collapsed">
-          <%= if @user == item.owner %> 
-        </div>
 
         <div class="entry_header">
           <%= item.title %>
