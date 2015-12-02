@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag "application.css" %>
+</head>
+
+<body>
+  <div class="container">
+    <h1>New Item <small>Sell your old stuff</small></h1>
+    <%= simple_form_for @item do |f| %>
+      <%= f.input :title %>
+      <%= f.input :summary %>
+      <%= f.input :price %>
+      <%= f.input :location %>
+      <%= f.input :category %>
+      <%= f.button :submit %>
+
+    <% end %>
+  </div>
+</body>

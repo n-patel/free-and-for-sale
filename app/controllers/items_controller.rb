@@ -3,13 +3,15 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
   end
-
-  def show
-    @item = Item.find(params[:id])
+  
+  def new
+  	@item = Item.new
   end
 
-  def new 
-  	@item = Item.new
+  def create
+    @item = Item.new(item_params)
+    @item.save
+    #if @pokemon.save
   end
 
   def edit
@@ -40,7 +42,7 @@ class ItemsController < ApplicationController
   	redirect_to items_path
   end
 
-  private 
+  private
   	def item_params
   		params.require(:item).permit(:title, :text)
   	end

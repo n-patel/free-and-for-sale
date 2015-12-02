@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
- 
+
   devise_for :add_devise_to_users
   get 'index/index'
 
 
  #not sure if post request works for this
-  post 'items/new' => 'items#new'
+  get 'items/new' => 'items#new'
 
   get 'items' => 'items#index'
   get '/items/:id' => 'items#show'
