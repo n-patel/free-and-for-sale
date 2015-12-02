@@ -41,36 +41,37 @@
 
   <div class="top_space"> </div>
 
-  <% @items.each do |item|
-    puts item if item.category == "clothing" %>
-    <div class="entry col-xs-12">
+  <% @items.each do |item| %>
+    <% if item.category == "clothing" %>
+      <div class="entry col-xs-12">
 
-        <div class="entry_header">
-          <%= item.title %>
-        </div>
+          <div class="entry_header">
+            <%= item.title %>
+          </div>
 
-        <div class="entry_body col-xs-12">
-          <!-- <div class="entry_photo col-xs-4">
-            <%= item.photos %>
-          </div> -->
+          <div class="entry_body col-xs-12">
+            <!-- <div class="entry_photo col-xs-4">
+              <%= item.photos %>
+            </div> -->
 
-          <div class="entry_info col-xs-7">
-            <div class="entry_info1">
-              <%= item.user_id %>, <%= item.location %>
-            </div>
+            <div class="entry_info col-xs-7">
+              <div class="entry_info1">
+                <%= item.user_id %>, <%= item.location %>
+              </div>
 
-            <div class="entry_info2">
-              <%= item.summary %>
+              <div class="entry_info2">
+                <%= item.summary %>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="comments_collapsed col-xs-12">
-          <%= item.comments %>
-        </div>
+          <div class="comments_collapsed col-xs-12">
+            <%= item.comments %>
+          </div>
 
-    </div>
-  <%end%>
+      </div>
+    <% end %>
+  <% end%>
 
 
 </body>
