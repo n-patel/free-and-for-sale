@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-
-  devise_for :add_devise_to_users
-  get 'index/index'
+  devise_for :users
+  # get 'index/index'
 
 
  #not sure if post request works for this
@@ -31,14 +30,13 @@ Rails.application.routes.draw do
 
 
 
+
   resources :items do
     resources :comments
   end
 
-  devise_for :admins
-  devise_for :users
-  get 'index', to: 'index'
-  root to: 'index#index'
+  get 'index', to: 'clothing#index'
+  root to: 'clothing#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
