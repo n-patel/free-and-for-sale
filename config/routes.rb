@@ -3,6 +3,18 @@ Rails.application.routes.draw do
   devise_for :add_devise_to_users
   get 'index/index'
 
+
+ #not sure if post request works for this
+  post 'items/new' => 'items#new'
+
+  get 'items' => 'items#index'
+  get '/items/:id' => 'items#show'
+  get '/items/:id/edit' => 'items#edit'
+  patch '/items/:id/' => 'items#update'
+
+
+
+
   resources :items do
     resources :comments
   end
