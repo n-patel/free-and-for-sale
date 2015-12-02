@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
  # get 'school/show'
 
-  get "/users/sign_out" => 'index#index'
   get 'services/index' => 'services#index'
 
  get 'school/index' => 'school#index'
