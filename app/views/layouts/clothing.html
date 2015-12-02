@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clothing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/Users/stevenelleman/Desktop/rails_decal/proj2/free_for_sale_css.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="header"> 
+  Free & For Sale
+</div>  
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div>
+      <ul class="nav navbar-nav">
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/clothing.html">Clothing</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/furniture.html">Furniture</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/electronics.html">Electronics</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/housing.html">Housing</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/school.html">School</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/services.html">Services</a></li>
+        <li><a href="/Users/stevenelleman/Desktop/rails_decal/proj2/misc.html">Misc</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 
+  add item buttom
+  add item page 
+  login page 
+  logout button
+  @user name + credits or login
+  
+  -->
+
+  <div class="top_space"> </div>
+
+  <% @items.each do |item|
+    puts item if item.category == "clothing" %>
+    <div class="entry col-xs-12">
+
+        <div class="entry_status_collapsed">
+          <%= if @user == item.owner %> 
+        </div>
+
+        <div class="entry_header">
+          <%= item.title %>
+        </div>
+
+        <div class="entry_body col-xs-12">
+          <div class="entry_photo col-xs-4"> 
+            <%= item.photos %>
+          </div>
+
+          <div class="entry_info col-xs-7">
+            <div class="entry_info1">
+              <%= item.owner %>, <%= item.location %>
+            </div>
+
+            <div class="entry_info2">
+              <%= item.summary %>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments_collapsed col-xs-12"> 
+          <%= item.comments %>
+        </div>
+
+    </div>
+  <%end%>
+
+
+</body>
+</html>
