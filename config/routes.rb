@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   devise_for :add_devise_to_users
   get 'index/index'
 
