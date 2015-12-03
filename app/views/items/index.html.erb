@@ -1,0 +1,62 @@
+
+<!--
+  add item buttom
+  add item page
+  login page
+  logout button
+  @user name + credits or login
+
+  -->
+<div class="container">
+  <% @items.each do |item| %>
+      <div class="panel panel-default item-entry">
+
+          <div class="panel-heading">
+            <h2 class="item-title">
+              <%= item.title %>
+              <small>Posted by <%= item.user.name || item.user_id %> on <%= item.created_at.to_time.strftime('%b %-d, %Y') %></small>
+            </h2>
+          </div>
+
+          <div class="panel-body item-body">
+            <!-- <div class="item-entry_photo col-xs-4">
+              <%= item.photos %>
+            </div> -->
+            <div class="row">
+              <div class="col-xs-4 item-details">
+                <h4>Item Summary</h4>
+                <p><%= item.summary %></p>
+                <h4>Pickup Location</h4>
+                <p><%= item.location %></p>
+              </div>
+
+              <div class="col-xs-8">
+                <h4>Item Discussion</h4>
+
+                <% item.comments.each do |comment| %>
+                    <div class="media comment">
+                      <div class="media-left">
+                        <a href="#">
+                          <img src="http://systemout.net/images/Gravatar-icon.png" alt="" class="media-object comment-icon">
+                        </a>
+                        <small class="user-info text-center"><%= comment.user.name || comment.user_id %></small>
+                      </div>
+                      <div class="media-body">
+                        <p class="comment">
+                          <%= comment.contents %>
+                        </p>
+                        <p class="small user-info pull-right">
+                          <em>Posted at <%= comment.created_at.to_time.strftime('%-I:%M%P on %b %-d, %Y') %></em>
+                        </p>
+                      </div>
+                      <hr>
+                    </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+      </div>
+  <% end %>
+
+  <%= button_to "Submit New Item", new_item_path, {:class => "new-item-btn btn btn-primary"} %>
+</div>
