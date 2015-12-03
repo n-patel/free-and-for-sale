@@ -19,11 +19,10 @@
           </div>
 
           <div class="panel-body item-body">
-            <!-- <div class="item-entry_photo col-xs-4">
-              <%= item.photos %>
-            </div> -->
             <div class="row">
               <div class="col-xs-4 item-details">
+                <h4>Item Price</h4>
+                <p>$<%= number_with_precision(item.price, :precision => 2, :delimiter => ',') %></p>
                 <h4>Item Summary</h4>
                 <p><%= item.summary %></p>
                 <h4>Pickup Location</h4>
