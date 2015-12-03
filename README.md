@@ -3,7 +3,8 @@ Free & For Sale Writeup
 
 ##Title: Free & For Sale
 ##Team Members: Tommy Tai, Nikhil Patel, Steven Elleman, Yadel Abraham
-##Demo Link: [Free & For Sale Demo](https://freeforsale.herokuapp.com/)
+##Website Link: [Free & For Sale](https://freeforsale.herokuapp.com/)
+##Demo Link: [View Demo]()
 
 ##Idea: A forum where users can buy/sell/give away various products ranging from seven different categories.
 
