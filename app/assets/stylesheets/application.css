@@ -104,90 +104,54 @@ input.radio {
 
  }
 
- .entry {
+ .item-entry {
  	width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
-
  }
 
- .entry_header {
+ .item-header {
  	width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
  	text-align: center;
-
-
-
  }
 
- .entry_body {
+ .item-body {
  	width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
-
-
  }
 
- .entry_photo {
+ .item-photo {
  	float: left;
  	border: solid;
  	border-width: 1px;
  	border-color: lightgray;
- 	margin: 5px;
 
  }
 
- .entry_info {
+ .item-info {
  	float: left;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
-
  }
 
- .entry_info1 {
- width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
 
+
+ .item-details {
+   width: 100%;
  }
 
- .entry_info2 {
- width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
 
- }
 
- .comments_collapsed {
- 	height: 0px;
- 	width: 0px;
- 	overflow: hidden;
- 	width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
-
+ .item-title {
+  width: 100%;
+  text-align: center;
  }
 
  .comments {
- width: 100%;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
- 	margin: 5px;
+   width: 100%;
+ }
 
+ .comment-user-info {
+  margin-top: 10px;
+  color: gray;
+ }
+
+ .comment-icon {
+ 	height: 64px;
+ 	width: 64px;
  }

@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-blah = User.create(:email => "blah@blah.com")
-fizz = User.create(:email => "fizz@fizz.org")
-buzz = User.create(:email => "buzz@buzz.net")
+blah = User.create(:email => "blah@blah.com", :name => "my name", :password => "somepassword")
+fizz = User.create(:email => "fizz@fizz.org", :name => "my name", :password => "somepassword")
+buzz = User.create(:email => "buzz@buzz.net", :name => "my name", :password => "somepassword")
 
 
 couch = Item.create(:title => "Ugly couch",
