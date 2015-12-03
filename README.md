@@ -1,5 +1,5 @@
-Free & For Sale Writeup
-=======================
+Free & For Sale App
+===================
 
 ##Title: Free & For Sale
 ##Team Members: Tommy Tai, Nikhil Patel, Steven Elleman, Yadel Abraham
