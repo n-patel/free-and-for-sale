@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # get 'users/sign_out' => "devise/sessions#destroy"
 
  #not sure if post request works for this
-  get 'items/new' => 'items#new'
+  post 'items/new' => 'items#new', as: :new_item
 
   get 'items' => 'items#index'
 
