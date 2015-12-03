@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  # get 'index/index'
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
+  # devise_for :users
 
+  # get 'users/sign_out' => "devise/sessions#destroy"
 
  #not sure if post request works for this
   get 'items/new' => 'items#new'
@@ -29,13 +33,10 @@ Rails.application.routes.draw do
   get 'clothing/index' => 'clothing#index'
 
 
-
-
   resources :items do
     resources :comments
   end
-
-  get 'index', to: 'clothing#index'
+  get 'index', to: 'index/index'
   root to: 'clothing#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
