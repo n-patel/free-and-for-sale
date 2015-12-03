@@ -1,5 +1,6 @@
 class SchoolController < ApplicationController
-  def show
-    @items = Item.all
+  def index
+    @items = Item.where(category: "school")
+    render 'items/index'
   end
 end

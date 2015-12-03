@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   def index
-    @items = Item.all
+    @items = Item.where(category: "services")
+    render 'items/index'
   end
 end

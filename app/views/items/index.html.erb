@@ -1,35 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Clothing</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/application.css">
-  <%= stylesheet_link_tag "application.css" %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
-</head>
-<body>
-
-
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div>
-      <ul class="nav navbar-nav">
-        <li><a href="/clothing/index">Clothing</a></li>
-        <li><a href="../../furniture/index">Furniture</a></li>
-        <li><a href="../../electronics/index">Electronics</a></li>
-        <li><a href="../../housing/index">Housing</a></li>
-        <li><a href="../../school/index">School</a></li>
-        <li><a href="../../services/index">Services</a></li>
-        <li><a href="../../misc/index">Misc</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <!--
   add item buttom
@@ -41,7 +9,6 @@
   -->
 <div class="container">
   <% @items.each do |item| %>
-    <% if item.category == "clothing" %>
       <div class="panel panel-default item-entry">
 
           <div class="panel-heading">
@@ -66,8 +33,7 @@
               <div class="col-xs-8">
                 <h4>Item Discussion</h4>
 
-                <% @comments.each do |comment| %>
-                  <% if comment.item == item %>
+                <% item.comments.each do |comment| %>
                     <div class="media comment">
                       <div class="media-left">
                         <a href="#">
@@ -85,15 +51,10 @@
                       </div>
                       <hr>
                     </div>
-                  <% end %>
                 <% end %>
               </div>
             </div>
           </div>
       </div>
-    <% end %>
   <% end%>
-
 </div>
-</body>
-</html>

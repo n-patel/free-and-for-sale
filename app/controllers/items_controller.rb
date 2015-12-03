@@ -3,14 +3,35 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
   end
-  
+
   def new
   	@item = Item.new
   end
 
+
   def create
     @item = Item.new(item_params)
+    @item.user = current_user
     @item.save
+
+    #binding.pry
+    case @item.category
+    when "clothing"
+      redirect_to clothing_path
+    when "electronics"
+      redirect_to electronics_path
+    when "furniture"
+      redirect_to furniture_path
+    when "housing"
+      redirect_to housing_path
+    when "misc"
+      redirect_to misc_path
+    when "school"
+      redirect_to school_path
+    when "services"
+      redirect_to services_path
+    end
+
     #if @pokemon.save
   end
 
@@ -18,14 +39,6 @@ class ItemsController < ApplicationController
   	@item = Item.find(params[:id])
   end
 
-  def create
-  	@item = Item.new(item_params)
-  	if @item.save
-  		redirect_to @item
-  	else
-  		render 'new'
-  	end
-  end
 
   def update
   	@item = Item.find(params[:id])
@@ -44,7 +57,7 @@ class ItemsController < ApplicationController
 
   private
   	def item_params
-  		params.require(:item).permit(:title, :text)
+  		params.require(:item).permit(:title, :summary, :location, :price, :category)
   	end
 
 end
