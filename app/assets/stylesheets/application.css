@@ -15,6 +15,92 @@
  */
  /*"bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 */
+
+
+
+.navbar {
+
+}
+
+.navbar-default {
+
+}
+
+nav {
+ width: 100%;
+ display: flex;
+
+}
+
+ul {
+ width: 100%;
+}
+
+ul li {
+ width: 14%;
+ text-align: center;
+}
+
+.top_space {
+ width: 100%;
+ height: 40px;
+
+}
+
+
+.item-header {
+ width: 100%;
+ text-align: center;
+}
+
+.item-body {
+ width: 100%;
+}
+
+.item-photo {
+ float: left;
+ border: solid;
+ border-width: 1px;
+ border-color: lightgray;
+
+}
+
+
+.item-details {
+  padding-left: 30px;
+}
+
+.item-body {
+  padding-right: 30px;
+}
+
+.item-title {
+ width: 100%;
+ text-align: center;
+}
+
+.comments {
+  width: 100%;
+}
+
+.user-info {
+ margin-top: 10px;
+ color: gray;
+}
+
+.comment-icon {
+ height: 64px;
+ width: 64px;
+}
+
+
+
+
+
+
+
+
+/* ----------- SIMPLE FORM ----------- */
 .simple_form div.input {
   margin-bottom: 10px;
   clear: both; /* Required for Webkit, but not for Gecko */
@@ -65,93 +151,3 @@ input.radio {
   margin-right: 5px;
   vertical-align: -3px;
 }
-
- .header {
- 	width: 100%;
- 	top: 15px;
- 	text-align: center;
- 	vertical-align: middle;
- 	position: fixed;
- }
-
- .navbar {
-
- }
-
- .navbar-default {
-
- }
-
- nav {
- 	width: 100%;
- 	position: fixed;
- 	top: 50px;
-
- }
-
- ul {
- 	width: 100%;
- }
-
- ul li {
- 	width: 14%;
- 	text-align: center;
- }
-
- .top_space {
- 	width: 100%;
- 	height: 40px;
-
- }
-
- .item-entry {
- 	width: 100%;
- }
-
- .item-header {
- 	width: 100%;
- 	text-align: center;
- }
-
- .item-body {
- 	width: 100%;
- }
-
- .item-photo {
- 	float: left;
- 	border: solid;
- 	border-width: 1px;
- 	border-color: lightgray;
-
- }
-
- .item-info {
- 	float: left;
- }
-
-
-
- .item-details {
-   width: 100%;
- }
-
-
-
- .item-title {
-  width: 100%;
-  text-align: center;
- }
-
- .comments {
-   width: 100%;
- }
-
- .comment-user-info {
-  margin-top: 10px;
-  color: gray;
- }
-
- .comment-icon {
- 	height: 64px;
- 	width: 64px;
- }
