@@ -1,27 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Clothing</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/app/assets/stylesheets/application.css">
-  <%= stylesheet_link_tag "new-item.css" %>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>New Item <small>Sell your old stuff</small></h1>
-    <%= simple_form_for @item do |f| %>
-      <%= f.input :title %>
-      <%= f.input :summary %>
-      <%= f.input :price %>
-      <%= f.input :location %>
-      <%= f.input :category %>
-      <p class="small">Acceptable types: 'clothing', 'furniture', 'electronics', 'housing', 'school', 'services', 'misc'</p>
-      <%= f.button :submit %>
-
-    <% end %>
-  </div>
-</body>
+<div class="container">
+  <h1>Submit a New Item <small>Sell your old stuff</small></h1>
+  <hr>
+  <%= simple_form_for @item do |f| %>
+    <%= f.input :title %>
+    <%= f.input :summary, as: :text %>
+    <%= f.input :price %>
+    <%= f.input :location %>
+    <%= f.input :category, :collection => ['clothing', 'furniture', 'electronics', 'housing', 'school', 'services', 'misc'] %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
