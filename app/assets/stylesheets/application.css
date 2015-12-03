@@ -16,7 +16,9 @@
  /*"bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 */
 
-
+/*
+*= require_tree .
+*/
 
 .navbar {
 
@@ -39,12 +41,6 @@ ul {
 ul li {
  width: 14%;
  text-align: center;
-}
-
-.top_space {
- width: 100%;
- height: 40px;
-
 }
 
 
