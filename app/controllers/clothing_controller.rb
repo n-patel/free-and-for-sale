@@ -1,6 +1,6 @@
 class ClothingController < ApplicationController
   def index
-    @items = Item.all
-    @comments = Comment.all
+    @items = Item.where(category: "clothing")
+    render 'items/index'
   end
 end

@@ -8,25 +8,22 @@ Rails.application.routes.draw do
   get 'items/new' => 'items#new'
 
   get 'items' => 'items#index'
-  get '/items/:id' => 'items#show'
+
   patch '/items/:id/' => 'items#update'
 
 
  # get 'school/show'
+get 'clothing/index' => 'clothing#index',       as: :clothing
+get 'electronics/index' => 'electronics#index', as: :electronics
+get 'furniture/index' => 'furniture#index',     as: :furniture
+get 'housing/index' => 'housing#index',         as: :housing
+get 'misc/index' => 'misc#index',               as: :misc
+get 'school/index' => 'school#index',           as: :school
+get 'services/index' => 'services#index',       as: :services
 
-  get 'services/index' => 'services#index'
 
- get 'school/index' => 'school#index'
 
-  get 'misc/index' => 'misc#index'
 
- get 'housing/index' => 'housing#index'
-
-  get 'furniture/index' => 'furniture#index'
-
-  get 'electronics/index' => 'electronics#index'
-
-  get 'clothing/index' => 'clothing#index'
 
 
 
