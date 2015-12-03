@@ -14,25 +14,8 @@ class ItemsController < ApplicationController
     @item.user = current_user
     @item.save
 
-    #binding.pry
-    case @item.category
-    when "clothing"
-      redirect_to clothing_path
-    when "electronics"
-      redirect_to electronics_path
-    when "furniture"
-      redirect_to furniture_path
-    when "housing"
-      redirect_to housing_path
-    when "misc"
-      redirect_to misc_path
-    when "school"
-      redirect_to school_path
-    when "services"
-      redirect_to services_path
-    end
+    redirect_to redirect_handler(@item)
 
-    #if @pokemon.save
   end
 
   def edit

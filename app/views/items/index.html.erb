@@ -52,6 +52,13 @@
                       <hr>
                     </div>
                 <% end %>
+
+                <h4>Post New Comment</h4>
+                <%= simple_form_for item.comments.new, url: item_comments_path(item) do |f| %>
+                  <%= f.input :contents, as: :text %>
+                  <%= f.button :submit %>
+                <% end %>
+
               </div>
             </div>
           </div>
