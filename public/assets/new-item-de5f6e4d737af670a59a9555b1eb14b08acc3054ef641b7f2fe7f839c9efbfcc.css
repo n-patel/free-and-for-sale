@@ -1,0 +1,8 @@
+@import url("simple-form.css");
+
+.new-item-btn {
+  position: fixed;
+  height: 40px;
+  bottom: 50px;
+  right: 50px;
+}
