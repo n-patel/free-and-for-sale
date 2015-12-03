@@ -20,18 +20,9 @@
 *= require_tree .
 */
 
-.navbar {
-
-}
-
-.navbar-default {
-
-}
-
 nav {
  width: 100%;
  display: flex;
-
 }
 
 ul {
@@ -52,15 +43,6 @@ ul li {
 .item-body {
  width: 100%;
 }
-
-.item-photo {
- float: left;
- border: solid;
- border-width: 1px;
- border-color: lightgray;
-
-}
-
 
 .item-details {
   padding-left: 30px;
