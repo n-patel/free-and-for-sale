@@ -6,10 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-blah = User.create(:email => "blah@blah.com", :name => "my name", :password => "somepassword")
-fizz = User.create(:email => "fizz@fizz.org", :name => "my name", :password => "somepassword")
-buzz = User.create(:email => "buzz@buzz.net", :name => "my name", :password => "somepassword")
-
+blah = User.create(:email => "blah@blah.com", :name => "Blahblahblah", :password => "somepassword")
+fizz = User.create(:email => "comeatmeyolo@gmail.com", :name => "Fizzlebang", :password => "somepassword")
+buzz = User.create(:email => "buzz@buzz.net", :name => "Buzz Lightyear", :password => "somepassword")
+harry = User.create(:email => "harry@hogwarts.com", :name => "Harry", :password => "magicwizards1")
+hagrid = User.create(:email => "hagrid@hogwarts.com", :name => "Hagrid", :password => "magicwizards2")
+dumbledore = User.create(:email => "dumbledore@hogwarts.com", :name => "Dumbledore", :password => "magicwizards3")
+ron = User.create(:email => "ron@hogwarts.com", :name => "Ron", :password => "magicwizards4")
 
 couch = Item.create(:title => "Ugly couch",
                     :summary => "A couch",
@@ -66,22 +69,37 @@ magic_hat = Item.create(:title => "Sorting Hat",
                         :location => "Hogwarts",
                         :sold => false,
                         :category => "clothing",
-                        :user => fizz)
+                        :user => dumbledore)
+
+pencil = Item.create(:title => "Pencil",
+                     :summary => "A glorious pencil. 0.5mm lead.  Comes with a full, unused eraser.  Imported directly from Japan.  Guaranteed high-quality.",
+                     :price => "6.95",
+                     :location => "Evans",
+                     :sold => false,
+                     :category => "school",
+                     :user => buzz)
+
+repair = Item.create(:title => "Computer Repair Service",
+                     :summary => "I'll fix your computer for the lowest price available.  I work with Mac, PCs, and all distributions of Linux.",
+                     :price => "39.99",
+                     :location => "Cory Hall",
+                     :sold => false,
+                     :category => "services",
+                     :user => buzz)
 
 
 Comment.create(:contents => "This is hideous!", :item => couch, :user => fizz)
 Comment.create(:contents => "Wow that's old", :item => phone, :user => buzz)
 Comment.create(:contents => "Doesn't even work but whatever I'll buy it", :item => phone, :user => blah)
 Comment.create(:contents => "Has a hole in it", :item => umbrella, :user => fizz)
-Comment.create(:contents => "Too many flowers. Ugly.", :item => shirt, :user => fizz)
-Comment.create(:contents => "I told you...", :item => shirt, :user => blah)
+Comment.create(:contents => "Too many flowers. Ugly.", :item => shirt, :user => harry)
+Comment.create(:contents => "I told you...", :item => shirt, :user => dumbledore)
 Comment.create(:contents => "There's no plumbing in here.", :item => house, :user => buzz)
-Comment.create(:contents => "Yeah I built it in the 1800s", :item => house, :user => fizz)
+Comment.create(:contents => "Yeah I built it in the 1800s", :item => house, :user => hagrid)
 Comment.create(:contents => "Don't want him sorry", :item => roommate, :user => fizz)
 Comment.create(:contents => "Gave my Slytherin, sux", :item => magic_hat, :user => buzz)
-Comment.create(:contents => "Yer a wizard, Harry", :item => magic_hat, :user => blah)
-Comment.create(:contents => "I'M NOT A WIZARD, HAGRID!", :item => magic_hat, :user => fizz)
-
-
-Photo.create(:url => "http://ak1.ostkcdn.com/images/products/P13318481L.jpg", :item => couch)
-Photo.create(:url => "http://cdn.shopify.com/s/files/1/0227/0033/products/Davek_Umbrella_Elite_Open_Straight_1024x1024.jpg?v=1381446908", :item => umbrella)
+Comment.create(:contents => "Yer a wizard, Harry", :item => magic_hat, :user => hagrid)
+Comment.create(:contents => "I'M NOT A WIZARD, HAGRID!", :item => magic_hat, :user => harry)
+Comment.create(:contents => "EECS master race lolz", :item => repair, :user => ron)
+Comment.create(:contents => "Pentel?", :item => pencil, :user => buzz)
+Comment.create(:contents => "It's super fashionable I promise", :item => magic_hat, :user => dumbledore)
