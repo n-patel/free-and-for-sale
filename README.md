@@ -4,7 +4,7 @@ Free & For Sale App
 ##Title: Free & For Sale
 ##Team Members: Tommy Tai, Nikhil Patel, Steven Elleman, Yadel Abraham
 ##Website Link: [Free & For Sale](https://freeforsale.herokuapp.com/)
-##Demo Link: [View Demo]()
+##Demo Link: [View Demo](https://github.com/tommytai/proj2)
 
 ##Idea: A forum where users can buy/sell/give away various products ranging from seven different categories.
 
